@@ -5,7 +5,7 @@ const config = {
     dialect: process.env.DB_DIALECT || 'postgres',
     database: process.env.DB_NAME,
     host: process.env.DB_HOST || '127.0.0.1',
-    port = process.env.PORT || '3000'
+    port = process.env.DB_PORT|| '3000'
   },
   development: {
     database: process.env.DB_NAME || 'server',
@@ -13,7 +13,7 @@ const config = {
     password: process.env.DB_PASSWORD || 'clave123',
     host: process.env.DB_HOST || '127.0.0.1',
     dialect: process.env.DB_DIALECT || 'postgres',
-    port = process.env.PORT || '3000'
+    port = process.env.DB_PORT || '3000'
   },
   test: {
     extend: 'default',
@@ -21,7 +21,7 @@ const config = {
   },
   production: {
     use_env_variable: "DATABASE_URL",
-    port = process.env.PORT || '3000',
+    port = process.env.DB_PORT || '3000',
     dialect: 'postgres',
     dialectOptions: {
       ssl: true,
