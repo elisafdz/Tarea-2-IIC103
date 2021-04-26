@@ -18,8 +18,11 @@ const config = {
     database: 'iic2513template_test',
   },
   production: {
-    extend: 'default',
-    use_env_variable: 'DATABASE_URL',
+    use_env_variable: "DATABASE_URL",
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: true,
+    },
   },
 };
   
